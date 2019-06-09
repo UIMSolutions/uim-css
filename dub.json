@@ -6,7 +6,7 @@
 	"license": "Apache 2.0",
 	"targetType": "library",
 	"dependencies": {
-		"uim-core":"~>0.19.5",
-		"uim-oop":"~>0.19.5"
+		"uim-core":"~master",
+		"uim-oop":"~master"
 	}
 }
