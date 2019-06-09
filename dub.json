@@ -1,0 +1,12 @@
+{
+	"name": "uim-css",
+	"authors": [ "UI Manufaktur UG" ],
+	"description": "CSS Library in D",
+	"copyright": "Copyright © 2019, UI Manufaktur UG",
+	"license": "Apache 2.0",
+	"targetType": "library",
+	"dependencies": {
+		"uim-core":"~>0.19.5",
+		"uim-oop":"~>0.19.5"
+	}
+}
