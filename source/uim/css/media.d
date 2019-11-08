@@ -2,22 +2,23 @@
 
 import uim.css;
 
-class DCSSMedia : DCSSRuleSet {
+class DCSSMedia : DCSSRules {
 	this() { super(); }
 	this(string aName) { this(); this.name = aName; }
-	this(string aName, DCSSObj[] someRules) { this(aName); this.rules = someRules; }
-	this(string aName, DCSSRuleSet aRuleSet) { this(aName); this.rules = aRuleSet.rules; }
+	this(string aName, DCSSRule[] someRules) { this(aName).rules(someRules); }
+	this(string aName, DCSSRules aRules) { this(aName).rules(aRules); }
 
-	override protected void init() { super.init; }
+	override protected void _init() { super._init; }
 
 	mixin(PropertyDefinition!("string", "name"));
 
 	override string toString() {
-		return "@media %s { \n%s\n }".format(this.name, super.toString);
+		return "@media %s{%s}".format(this.name, super.toString);
 	}
 }
 auto CSSMedia() { return new DCSSMedia(); }
 auto CSSMedia(string aName) { return new DCSSMedia(aName); }
+
 
 enum CSSMediaTypes : string {
 	All = "all", //Used for all media type devices
@@ -27,10 +28,4 @@ enum CSSMediaTypes : string {
 }
 
 unittest {
-	writeln("Testing ", __MODULE__);
-
-	auto media = CSSMedia("screen and (min-width: 480px)");
-	writeln(media);
-	media.rules = media.rules ~ CSSRule("body", ["background-color": "lightgreen"]);
-	writeln(media);
 }

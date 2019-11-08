@@ -6,16 +6,17 @@ public import uim.core;
 public import uim.oop;
 
 public import uim.css.container;
+public import uim.css.declaration;
 public import uim.css.obj;
 public import uim.css.rule;
-public import uim.css.ruleset;
+public import uim.css.rules;
 public import uim.css.media;
 
-class DCSS : DCSSRuleSet {
+class DCSS : DCSSRules {
 	this() { super(); }
 	this(DCSSObj[] someRules) { this(); }
 
-	override protected void init() { super.init; }
+	override protected void _init() { super._init; }
 
 	string[] _properties;
 	// CSS background properties
@@ -29,6 +30,7 @@ class DCSS : DCSSRuleSet {
 			css.backgroundColor(color);
 			return this;
 		}
+
 		auto image(string image) {
 			css.backgroundImage(image);
 			return this;
@@ -281,10 +283,7 @@ unittest {
 	 .image("xxx")
 	 .color("lightgreen");
 	 */	
-	
-	
 }
 
 unittest {
-	writeln("Testing ", __MODULE__);
 }

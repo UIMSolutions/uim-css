@@ -3,9 +3,8 @@
 import uim.css;
 
 class DCSSObj : Obj {
-	this() { init; }
-	 
-	protected void init() {}
+	this() { _init; }	 
+	protected void _init() {}
 
 	override string toString() {
 		return super.toString;
@@ -14,6 +13,5 @@ class DCSSObj : Obj {
 auto CSSOBJ() { return new DCSSObj(); }
 
 unittest {
-	writeln("Testing ", __MODULE__);
 }
 
