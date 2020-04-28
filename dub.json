@@ -1,13 +1,13 @@
 {
     "name": "uim-css",
-    "authors": ["UI Manufaktur UG"],
+    "authors": ["UI Manufaktur Team"],
     "description": "CSS Library in D",
     "copyright": "Copyright © 2017-2020, UI Manufaktur UG",
     "license": "Apache 2.0",
     "targetType": "library",
     "dependencies": {
-        "vibe-d": "~>0.9.0-alpha.3",
-        "uim-core": "~>0.19.11",
-        "uim-oop": "~>0.19.11"
+        "vibe-d": "~>0.9.0-alpha.4",
+        "uim-core": "~>0.20.4",
+        "uim-oop": "~>0.20.4"
     }
 }
