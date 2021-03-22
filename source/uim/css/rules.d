@@ -2,6 +2,7 @@
 
 import uim.css;
 
+@safe:
 class DCSSRules : DCSSObj {
 	this() { super(); }
 	this(DCSSRule[] someRules) { this().rules(someRules); }

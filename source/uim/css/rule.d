@@ -1,6 +1,9 @@
 ﻿module uim.css.rule;
 
 import uim.css;
+import std.algorithm.sorting;
+
+@safe:
 
 /// A single CSS rule with one or more selectors, and a declaration block.
 class DCSSRule : DCSSObj {
@@ -34,7 +37,7 @@ class DCSSRule : DCSSObj {
 
 	override string toString() {
 		string[] inner;
-		foreach(k; _declarations.keys.sort) inner ~= k~":"~_declarations[k];  
+		foreach(k; _declarations.byKey().array.sort!("a < b")) inner ~= k~":"~_declarations[k];  
 		return _selector~"{"~inner.join(";")~"}";
 	}
 }
