@@ -1,5 +1,6 @@
 module uim.css.classes.css;
 
+@safe:
 import uim.css;
 
 class DCSS {

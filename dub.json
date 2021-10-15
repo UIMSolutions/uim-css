@@ -6,8 +6,23 @@
     "license": "MIT",
     "targetType": "library",
     "dependencies": {
-        "vibe-d": "~>0.9.2",
-        "uim-core": "~master",
-        "uim-oop": "~master"
-    }
+        "vibe-d": "~>0.9.4",
+        "uim-core": {
+            "repository":"git+https://github.com/UI-Manufaktur/uim-core.git",
+            "version":"9171179266f02bafce9b9d7cba01f97354d01a59"
+        },
+        "uim-oop": {
+            "repository": "git+https://github.com/UI-Manufaktur/uim-oop.git",
+            "version": "a6fb933896b9864243e4455e61c77bc07f2b96e4"
+        }	
+    },
+    "configurations": [
+		{
+			"name": "default"
+		},
+		{
+			"name": "uim_core",
+			"versions": ["uim_core"]
+		}
+	]
 }
