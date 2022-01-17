@@ -24,3 +24,4 @@ docs/
 *.lst
 uim-css-test-library
 dub.selections.json
+source/uim/css/declaration.d

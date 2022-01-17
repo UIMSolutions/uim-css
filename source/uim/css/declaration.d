@@ -25,5 +25,5 @@ auto CSSDeclaration(string aName) { return new DCSSDeclaration(aName); }
 auto CSSDeclaration(string aName, string aValue) { return new DCSSDeclaration(aName,aValue); }
 
 unittest {
-	assert(CSSDeclaration("background-color", "lightgreen") == "background-color:lightgreen");
-}
+	version(uim_css) {
+		assert(CSSDeclaration("background-color", "lightgreen") == "background-color:lightgreen"); }}

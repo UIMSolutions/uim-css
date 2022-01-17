@@ -12,6 +12,7 @@ public import uim.css.classes;
 public import uim.css.helpers;
 
 // uim.css modules
+public import uim.css.containers;
 public import uim.css.container;
 public import uim.css.declaration;
 public import uim.css.obj;

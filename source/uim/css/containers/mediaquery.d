@@ -6,48 +6,59 @@ import uim.css;
 class DCSSMediaQuery {
   this() { }
   this(string newCondition) { 
-    this(); this.condition = newCondition; }
+    this(); 
+    this
+    .condition(newCondition); }
 
-  mixin(OProperty!("string", "condition")
+  mixin(OProperty!("string", "condition"));
 
   protected STRINGAA _rules;
-  bool newRule(string name, string properties) {
-    _rules[name] = properties;
-    return true;
-  }
+
+  auto rule(this O)(string selector) {
+    return _rules.get(selector, null); }
   unittest {
     version(uim_css) {
       /// TODO
     }}
 
-  bool addToRule(string name, string properties) {
-    if (!name !in _rules) _rules[name] = properties;
-    else _rules[name] ~= properties;
-    return true;
-  }
+  O rule(this O)(string selector, string properties) {
+    _rules[selector] = properties;
+    return cast(O)this; }
   unittest {
     version(uim_css) {
       /// TODO
     }}
 
-  bool removeRule(string name) {
-    if (name !in _rules) return false;
-    _rules.remove(name); 
-    return true;
-  }
+  O removeRule(this O)(string selector) {
+    _rules.remove(selector); 
+    return cast(O)this; }
   unittest {
     version(uim_css) {
       /// TODO
     }}
 
-  string toString() {
+  auto opIndex(string selector) {
+    return rule(selector); }
+  unittest {
+    version(uim_css) {
+      /// TODO
+    }}
+
+  O opIndexAssign(this O)(string selector, string properties) {
+    rule(selector, properties);
+    return cast(O)this; }
+  unittest {
+    version(uim_css) {
+      /// TODO
+    }}
+
+  override string toString() {
     string result;
 
-    foreach(k, v; rules) { result ~= k~"{"~v~"}";
+    foreach(sel, props; _rules) result ~= sel~"{"~props~"}";
 
     if (condition) return "@media "~condition~"{"~result~"}";
-    else return result;
-  }
+    else return result; }
   unittest {
     version(uim_css) {
       /// TODO
