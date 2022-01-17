@@ -2,27 +2,21 @@
     "name": "uim-css",
     "authors": ["UI Manufaktur Team"],
     "description": "CSS Library in D",
-    "copyright": "Copyright © 2017-2020, UI Manufaktur UG",
+    "copyright": "Copyright © 2017-2021, UI Manufaktur UG, 2022 Ozan Nurettin Süel",
     "license": "MIT",
     "targetType": "library",
     "dependencies": {
         "vibe-d": "~>0.9.4",
-        "uim-core": {
-            "repository":"git+https://github.com/UI-Manufaktur/uim-core.git",
-            "version":"9171179266f02bafce9b9d7cba01f97354d01a59"
-        },
-        "uim-oop": {
-            "repository": "git+https://github.com/UI-Manufaktur/uim-oop.git",
-            "version": "a6fb933896b9864243e4455e61c77bc07f2b96e4"
-        }	
+        "uim-core": "~>22.1.1",
+        "uim-oop": "~>22.1.1"
     },
     "configurations": [
 		{
 			"name": "default"
 		},
 		{
-			"name": "uim_core",
-			"versions": ["uim_core"]
+			"name": "test",
+			"versions": ["test_uim_core"]
 		}
 	]
 }
