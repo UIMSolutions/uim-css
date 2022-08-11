@@ -1,5 +1,6 @@
 module uim.css.parser;
 
+@safe:
 import uim.css;
 
 string[] parse(string css) {
@@ -7,6 +8,6 @@ string[] parse(string css) {
 
   return results;
 }
-unittest {
+version(test_uim_css) { unittest {
   /// TODO
-}
+}}

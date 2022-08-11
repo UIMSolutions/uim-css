@@ -1,5 +1,6 @@
 ﻿module uim.css.media;
 
+@safe:
 import uim.css;
 
 class DCSSMedia : DCSSRules {
@@ -27,5 +28,6 @@ enum CSSMediaTypes : string {
 	Speech = "speech" // 	Used for screenreaders that "reads" the page out loud
 }
 
-unittest {
-}
+version(test_uim_css) { unittest {
+	// TODO
+}}

@@ -9,12 +9,12 @@ class DCSS {
 
   // Resulting contet
   mixin(XString!("content"));
-  unittest {}
+  version(test_uim_css) { unittest {}}
 
   O rule(this O)(string selector, string[string] values) {
     return content("%s%s".format(selector, values.toCss));
   }
-  unittest {}
+  version(test_uim_css) { unittest {}}
 
   // Compare with toString result
   bool opEquals(string txt) { return (txt == toString); }
@@ -22,9 +22,9 @@ class DCSS {
   string toHTML() {
     return `<style>`~content~`</style>`;
   }
-  unittest {
+  version(test_uim_css) { unittest {
     assert(CSS("test").toHTML == `<style>test</style>`);
-  }
+  }}
 
   override string toString() {
     return content;
@@ -33,4 +33,4 @@ class DCSS {
 auto CSS() { return new DCSS(); }
 auto CSS(string newContent) { return new DCSS(newContent); }
 
-unittest {}
+version(test_uim_css) { unittest {}}

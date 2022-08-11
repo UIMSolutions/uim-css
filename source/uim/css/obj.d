@@ -1,8 +1,8 @@
 ﻿module uim.css.obj;
 
+@safe:
 import uim.css;
 
-@safe:
 class DCSSObj : Obj {
 	this() { _init; }	 
 	protected void _init() {}
@@ -13,6 +13,7 @@ class DCSSObj : Obj {
 }
 auto CSSOBJ() { return new DCSSObj(); }
 
-unittest {
-}
+version(test_uim_css) { unittest {
+	// TODO
+}}
 

@@ -262,7 +262,7 @@ enum CS3Colors : string {
 	Cyan = "cyan"
 }
 
-unittest {
+version(test_uim_css) { unittest {
 	writeln("Testing ", __MODULE__);
 //
 //	auto css = CSSRuleSet;
@@ -293,5 +293,5 @@ unittest {
 	 * /	
 }
 
-unittest {
+version(test_uim_css) { unittest {
 } */
