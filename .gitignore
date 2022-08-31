@@ -25,3 +25,7 @@ docs/
 uim-css-test-library
 dub.selections.json
 source/uim/css/declaration.d
+uim-css-test-default
+uim-css-test-test
+uim-css-test-testAll
+uim-css-test-testUnit
