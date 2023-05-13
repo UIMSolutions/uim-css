@@ -1,4 +1,4 @@
-module uim.css.containers.mediaqueries;
+module uim.css.classes.containers.mediaqueries;
 
 @safe:
 import uim.css;

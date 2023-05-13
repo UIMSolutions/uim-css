@@ -1,4 +1,4 @@
-module uim.css.containers.container;
+module uim.css.classes.containers.container;
 
 @safe:
 import uim.css;

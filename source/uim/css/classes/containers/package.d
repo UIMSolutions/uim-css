@@ -1,8 +1,8 @@
-module uim.css.containers;
+module uim.css.classes.containers;
 
 @safe:
 import uim.css;
 
-public import uim.css.containers.mediaqueries;
-public import uim.css.containers.mediaquery;
+public import uim.css.classes.containers.mediaqueries;
+public import uim.css.classes.containers.mediaquery;
 
