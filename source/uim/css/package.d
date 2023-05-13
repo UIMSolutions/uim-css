@@ -12,13 +12,14 @@ public import uim.css.classes;
 public import uim.css.helpers;
 
 // uim.css modules
-public import uim.css.classes.containers;
-public import uim.css.container;
 public import uim.css.declaration;
 public import uim.css.obj;
 public import uim.css.rule;
 public import uim.css.rules;
 public import uim.css.media;
+public import uim.css.interfaces;
+public import uim.css.mixins;
+public import uim.css.tests;
 
 /* class DCSSx : DCSSRules {
 	this() { super(); }
