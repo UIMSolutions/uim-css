@@ -1,7 +1,7 @@
 module uim.css.parser;
 
-@safe:
 import uim.css;
+@safe:
 
 string[] parse(string css) {
   string[] results;

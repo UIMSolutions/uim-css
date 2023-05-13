@@ -1,7 +1,7 @@
 ﻿module uim.css.media;
 
-@safe:
 import uim.css;
+@safe:
 
 class DCSSMedia : DCSSRules {
 	this() { super(); }

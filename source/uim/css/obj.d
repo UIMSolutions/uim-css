@@ -1,7 +1,7 @@
 ﻿module uim.css.obj;
 
-@safe:
 import uim.css;
+@safe:
 
 class DCSSObj : Obj {
 	this() { _init; }	 

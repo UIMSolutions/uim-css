@@ -1,7 +1,7 @@
 module uim.css.classes.containers.mediaquery;
 
-@safe:
 import uim.css;
+@safe:
 
 class DCSSMediaQuery {
   this() { }

@@ -1,7 +1,7 @@
 module uim.css.declaration;
 
-@safe:
 import uim.css;
+@safe:
 
 class DCSSDeclaration : DCSSObj {
 	this() { super(); }

@@ -1,7 +1,7 @@
 module uim.css.classes.containers.container;
 
-@safe:
 import uim.css;
+@safe:
 
 class DCSSContainer {
   DCSSObj[] _cssItems;
