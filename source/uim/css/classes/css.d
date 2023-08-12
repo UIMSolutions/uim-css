@@ -1,8 +1,8 @@
 module uim.css.classes.css;
 
 import uim.css;
-@safe:
 
+@safe:
 class DCSS {
   this() {}
   this(string newContent) { this.content(newContent); }
@@ -22,9 +22,6 @@ class DCSS {
   string toHTML() {
     return `<style>`~content~`</style>`;
   }
-  version(test_uim_css) { unittest {
-    assert(CSS("test").toHTML == `<style>test</style>`);
-  }}
 
   override string toString() {
     return content;
@@ -33,4 +30,6 @@ class DCSS {
 auto CSS() { return new DCSS(); }
 auto CSS(string newContent) { return new DCSS(newContent); }
 
-version(test_uim_css) { unittest {}}
+unittest {
+  assert(CSS("test").toHTML == `<style>test</style>`);
+}
